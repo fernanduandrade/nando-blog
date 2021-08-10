@@ -36,3 +36,4 @@
 /home/fernando/Documents/my-blog/obj/Debug/net5.0/my-blog.csproj.CopyComplete
 /home/fernando/Documents/my-blog/obj/Debug/net5.0/Razor/Views/Home/Post.cshtml.g.cs
 /home/fernando/Documents/my-blog/obj/Debug/net5.0/Razor/Views/_ViewImports.cshtml.g.cs
+/home/fernando/Documents/my-blog/obj/Debug/net5.0/Razor/Views/Home/Edit.cshtml.g.cs
