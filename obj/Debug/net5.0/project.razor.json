@@ -15617,6 +15617,32 @@
     "CSharpLanguageVersion": 900
   },
   "RootNamespace": "my_blog",
-  "Documents": [],
+  "Documents": [
+    {
+      "FilePath": "/home/fernando/Documents/my-blog/Views/Home/Index.cshtml",
+      "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/fernando/Documents/my-blog/Views/Shared/_Layout.cshtml",
+      "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/fernando/Documents/my-blog/Views/Home/Post.cshtml",
+      "TargetPath": "Views\\Home\\Post.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/fernando/Documents/my-blog/Views/_ViewImports.cshtml",
+      "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/fernando/Documents/my-blog/Views/_ViewStart.cshtml",
+      "TargetPath": "Views\\_ViewStart.cshtml",
+      "FileKind": "mvc"
+    }
+  ],
   "SerializationFormat": "0.2"
 }
