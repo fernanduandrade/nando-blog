@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using my_blog.Data;
+using my_blog.Repositories;
 
 namespace my_blog
 {
@@ -21,6 +22,7 @@ namespace my_blog
         {
             services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddDbContext<DataContext>(options => options.UseNpgsql(_config.GetConnectionString("DefaultConnection")));
+            services.AddTransient<IBlogRepository, BlogRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
