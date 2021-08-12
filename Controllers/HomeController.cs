@@ -15,7 +15,8 @@ namespace my_blog.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var posts = _repository.GetAllPosts();
+            return View(posts);
         }
 
         public IActionResult Post()
