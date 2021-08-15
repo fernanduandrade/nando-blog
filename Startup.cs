@@ -26,6 +26,10 @@ namespace my_blog
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<DataContext>();
             
+            services.ConfigureApplicationCookie(option => {
+                option.LoginPath = "/Auth/Login";
+            });
+
             services.AddTransient<IBlogRepository, BlogRepository>();
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }

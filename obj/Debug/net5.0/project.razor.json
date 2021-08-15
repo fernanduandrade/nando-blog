@@ -15624,8 +15624,18 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/fernando/Documents/my-blog/Views/Panel/Index.cshtml",
+      "TargetPath": "Views\\Panel\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/fernando/Documents/my-blog/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/fernando/Documents/my-blog/Views/Panel/Edit.cshtml",
+      "TargetPath": "Views\\Panel\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -15641,11 +15651,6 @@
     {
       "FilePath": "/home/fernando/Documents/my-blog/Views/_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "/home/fernando/Documents/my-blog/Views/Home/Edit.cshtml",
-      "TargetPath": "Views\\Home\\Edit.cshtml",
       "FileKind": "mvc"
     },
     {

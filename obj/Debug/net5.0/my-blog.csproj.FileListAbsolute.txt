@@ -36,7 +36,6 @@
 /home/fernando/Documents/my-blog/obj/Debug/net5.0/my-blog.csproj.CopyComplete
 /home/fernando/Documents/my-blog/obj/Debug/net5.0/Razor/Views/Home/Post.cshtml.g.cs
 /home/fernando/Documents/my-blog/obj/Debug/net5.0/Razor/Views/_ViewImports.cshtml.g.cs
-/home/fernando/Documents/my-blog/obj/Debug/net5.0/Razor/Views/Home/Edit.cshtml.g.cs
 /home/fernando/Documents/my-blog/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll
 /home/fernando/Documents/my-blog/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
 /home/fernando/Documents/my-blog/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.dll
@@ -57,3 +56,5 @@
 /home/fernando/Documents/my-blog/bin/Debug/net5.0/Microsoft.Extensions.FileProviders.Embedded.dll
 /home/fernando/Documents/my-blog/obj/Debug/net5.0/my-blog.MvcApplicationPartsAssemblyInfo.cs
 /home/fernando/Documents/my-blog/obj/Debug/net5.0/Razor/Views/Auth/Login.cshtml.g.cs
+/home/fernando/Documents/my-blog/obj/Debug/net5.0/Razor/Views/Panel/Index.cshtml.g.cs
+/home/fernando/Documents/my-blog/obj/Debug/net5.0/Razor/Views/Panel/Edit.cshtml.g.cs

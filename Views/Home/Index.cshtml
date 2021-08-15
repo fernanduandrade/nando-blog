@@ -3,18 +3,14 @@
 @{
 
 }
-<h2>Página principal</h2>
+<h2>Admin principal</h2>
 
 <div>
     <ul>
         @foreach (var post in Model)
         {
             <li>
-                <a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">@post.Title</a>
-                |
-                <a asp-controller="Home" asp-action="Edit" asp-route-id="@post.Id">Editar</a>            
-                |
-                <a asp-controller="Home" asp-action="Remove" asp-route-id="@post.Id">Remover</a>                    
+                <a asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">@post.Title</a>              
             </li>
         }
     </ul>
