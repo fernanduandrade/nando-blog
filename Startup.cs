@@ -27,7 +27,6 @@ namespace my_blog
                 .AddEntityFrameworkStores<DataContext>();
             
             services.AddTransient<IBlogRepository, BlogRepository>();
-            
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
@@ -39,8 +38,8 @@ namespace my_blog
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseMvcWithDefaultRoute();
             app.UseAuthentication();
+            app.UseMvcWithDefaultRoute();
             // app.UseEndpoints(endpoints =>
             // {
             //     endpoints.MapGet("/", async context =>

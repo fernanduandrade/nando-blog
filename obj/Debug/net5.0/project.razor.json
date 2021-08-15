@@ -15629,6 +15629,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/fernando/Documents/my-blog/Views/Auth/Login.cshtml",
+      "TargetPath": "Views\\Auth\\Login.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/fernando/Documents/my-blog/Views/Home/Post.cshtml",
       "TargetPath": "Views\\Home\\Post.cshtml",
       "FileKind": "mvc"

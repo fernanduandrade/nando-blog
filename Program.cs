@@ -23,7 +23,7 @@ namespace my_blog
                 var ctx = scope.ServiceProvider.GetRequiredService<DataContext>();
                 var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
                 var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-
+                
                 ctx.Database.EnsureCreated();
 
                 var adminRole = new IdentityRole("Admin");
@@ -55,7 +55,6 @@ namespace my_blog
             {
                 Console.WriteLine(error.Message);
             }
-            
             host.Run();
         }
 

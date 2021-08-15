@@ -56,3 +56,4 @@
 /home/fernando/Documents/my-blog/bin/Debug/net5.0/Microsoft.AspNetCore.Identity.UI.dll
 /home/fernando/Documents/my-blog/bin/Debug/net5.0/Microsoft.Extensions.FileProviders.Embedded.dll
 /home/fernando/Documents/my-blog/obj/Debug/net5.0/my-blog.MvcApplicationPartsAssemblyInfo.cs
+/home/fernando/Documents/my-blog/obj/Debug/net5.0/Razor/Views/Auth/Login.cshtml.g.cs
