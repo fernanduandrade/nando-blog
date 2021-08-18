@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using my_blog.Data;
 using my_blog.Repositories;
 using Microsoft.AspNetCore.Identity;
+using my_blog.Data.FileManager;
 
 namespace my_blog
 {
@@ -31,6 +32,7 @@ namespace my_blog
             });
 
             services.AddTransient<IBlogRepository, BlogRepository>();
+            services.AddTransient<IFileManager, FileManager>();
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }
 
@@ -41,6 +43,8 @@ namespace my_blog
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseStaticFiles();
 
             app.UseAuthentication();
             app.UseMvcWithDefaultRoute();
