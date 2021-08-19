@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/style.css" />
 </head>
 <body>
     <div>
+        <nav>
         <a asp-controller="Home" asp-action="Index">Home</a>
-        <a asp-controller="Home" asp-action="Edit">Criar Post</a>
         <a asp-controller="Panel" asp-action="Index">Painel</a>
         @if(User.Identity.IsAuthenticated) 
         {
@@ -20,8 +21,9 @@
         {
             <a asp-controller="Auth" asp-action="Login">Entrar</a>
         }
-        
+        </nav>
     </div>
+    
     <div>
         @RenderBody()   
     </div>
