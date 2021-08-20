@@ -1136,11 +1136,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/fernando/Documents/my-blog/my-blog.csproj",
+      "projectUniqueName": "/home/fernando/Área de Trabalho/nando-blog/my-blog.csproj",
       "projectName": "my-blog",
-      "projectPath": "/home/fernando/Documents/my-blog/my-blog.csproj",
+      "projectPath": "/home/fernando/Área de Trabalho/nando-blog/my-blog.csproj",
       "packagesPath": "/home/fernando/.nuget/packages/",
-      "outputPath": "/home/fernando/Documents/my-blog/obj/",
+      "outputPath": "/home/fernando/Área de Trabalho/nando-blog/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/fernando/.nuget/NuGet/NuGet.Config"
@@ -1206,7 +1206,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.302/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.400/RuntimeIdentifierGraph.json"
       }
     }
   }

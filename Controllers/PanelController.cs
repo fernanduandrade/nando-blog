@@ -39,7 +39,10 @@ namespace my_blog.Controllers
                     Id = post.Id,
                     Title = post.Title,
                     Body = post.Body,
-                    CurrentImage = post.Image
+                    CurrentImage = post.Image,
+                    Description = post.Description,
+                    Category = post.Category,
+                    Tags = post.Tags
                 });
             }
         }
@@ -52,6 +55,9 @@ namespace my_blog.Controllers
                 Id = viewModel.Id,
                 Title = viewModel.Title,
                 Body = viewModel.Body,
+                Description = viewModel.Description,
+                Category = viewModel.Category,
+                Tags = viewModel.Tags
                 
             };
 

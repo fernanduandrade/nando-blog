@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1uM9TODTOQQgaF5ZiXVBY6+yg0x1g9GZDepdQld0081d5yuWeoFK3jS7LJJsAFJtpAlm8wm7t6zZdgqFdbVMeA==",
+  "dgSpecHash": "//r4LIdBNOmOg51WbLGv3Qgsnpmz6AN9NUfxmyuahD5j2syZBS895ijANDaMPAXvJhJL2vkmo1ORnIzeheXVXA==",
   "success": true,
-  "projectFilePath": "/home/fernando/Documents/my-blog/my-blog.csproj",
+  "projectFilePath": "/home/fernando/Área de Trabalho/nando-blog/my-blog.csproj",
   "expectedPackageFiles": [
     "/home/fernando/.nuget/packages/humanizer.core/2.8.26/humanizer.core.2.8.26.nupkg.sha512",
     "/home/fernando/.nuget/packages/microsoft.aspnetcore.cryptography.internal/5.0.9/microsoft.aspnetcore.cryptography.internal.5.0.9.nupkg.sha512",

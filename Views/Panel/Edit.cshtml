@@ -4,7 +4,7 @@
 
 }
 
-<link rel="stylesheet" href="~/lib/Trumbowyg-main/dist/ui/trumbowyg.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.25.1/ui/trumbowyg.min.css">
 
 <div>
     <form asp-controller="Panel" asp-action="Edit" method="post" enctype="multipart/form-data">
@@ -15,8 +15,27 @@
         </div>
 
         <div>
+            <label>Descrição</label>
+            <input asp-for="Description" />
+        </div>
+
+        <div>
+            <label>Tags</label>
+            <input asp-for="Tags" />
+        </div>
+
+        <div>
+            <label>Categoria</label>
+            <select asp-for="Category">
+                <option value="0">Programming</option>
+                <option value="1">Tips</option>
+                <option value="2">Study</option>
+            </select>
+        </div>
+
+        <div>
             <label>Corpo da Mensagem</label>
-            <textarea asp-for="Body" id="editor"></textarea>
+            <textarea id="editor" asp-for="Body"></textarea>
         </div>
 
         <div>
@@ -31,7 +50,7 @@
 
 @section scripts{
     <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="~/lib/Trumbowyg-main/dist/trumbowyg.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.25.1/trumbowyg.min.js"></script>
     <script>
         $('#editor').trumbowyg();
     </script>
