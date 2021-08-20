@@ -38,7 +38,8 @@ namespace my_blog.Controllers
                 {
                     Id = post.Id,
                     Title = post.Title,
-                    Body = post.Body
+                    Body = post.Body,
+                    CurrentImage = post.Image
                 });
             }
         }
@@ -51,8 +52,13 @@ namespace my_blog.Controllers
                 Id = viewModel.Id,
                 Title = viewModel.Title,
                 Body = viewModel.Body,
-                Image = await _fileManager.SaveImage(viewModel.Image)
+                
             };
+
+            if(viewModel.Image == null)
+                post.Image = viewModel.CurrentImage;
+            else 
+                post.Image = await _fileManager.SaveImage(viewModel.Image);
 
             if(post.Id > 0)
                 _repository.UpdatePost(post);
