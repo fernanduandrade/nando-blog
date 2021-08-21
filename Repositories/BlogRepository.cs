@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -23,6 +24,13 @@ namespace my_blog.Repositories
         public List<Post> GetAllPosts()
         {
             return _ctx.Post.ToList();
+        }
+
+        public List<Post> GetAllPosts(string category)
+        {
+            return _ctx.Post
+                .Where(post=> post.Category.ToLower().Equals(category.ToLower()))
+                .ToList();
         }
 
         public Post GetPost(int id)
