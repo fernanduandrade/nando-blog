@@ -58,3 +58,5 @@ C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\my-blog.dll
 C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\ref\my-blog.dll
 C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\my-blog.pdb
 C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\my-blog.genruntimeconfig.cache
+C:\Users\Fernando\Desktop\nando-blog\bin\Release\net5.0\appsettings.Production.Development.json
+C:\Users\Fernando\Desktop\nando-blog\bin\Release\net5.0\appsettings.Production.json

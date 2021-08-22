@@ -6,6 +6,8 @@ C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\PubTmp\Out\wwwroot\conte
 C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\PubTmp\Out\wwwroot\css\style.css
 C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\PubTmp\Out\appsettings.Development.json
 C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\PubTmp\Out\appsettings.json
+C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\PubTmp\Out\appsettings.Production.Development.json
+C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\PubTmp\Out\appsettings.Production.json
 C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\PubTmp\Out\my-blog.dll
 C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\PubTmp\Out\my-blog.deps.json
 C:\Users\Fernando\Desktop\nando-blog\obj\Release\net5.0\PubTmp\Out\my-blog.runtimeconfig.json
