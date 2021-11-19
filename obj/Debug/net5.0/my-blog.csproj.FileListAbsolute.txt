@@ -147,7 +147,6 @@ C:\Users\Fernando\Desktop\nando-blog\bin\Debug\net5.0\Microsoft.Extensions.Ident
 C:\Users\Fernando\Desktop\nando-blog\bin\Debug\net5.0\Npgsql.dll
 C:\Users\Fernando\Desktop\nando-blog\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
 C:\Users\Fernando\Desktop\nando-blog\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\Fernando\Desktop\nando-blog\obj\Debug\net5.0\my-blog.csprojAssemblyReference.cache
 C:\Users\Fernando\Desktop\nando-blog\obj\Debug\net5.0\my-blog.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Fernando\Desktop\nando-blog\obj\Debug\net5.0\my-blog.AssemblyInfoInputs.cache
 C:\Users\Fernando\Desktop\nando-blog\obj\Debug\net5.0\my-blog.AssemblyInfo.cs
@@ -178,3 +177,6 @@ C:\Users\Fernando\Desktop\nando-blog\obj\Debug\net5.0\my-blog.dll
 C:\Users\Fernando\Desktop\nando-blog\obj\Debug\net5.0\ref\my-blog.dll
 C:\Users\Fernando\Desktop\nando-blog\obj\Debug\net5.0\my-blog.pdb
 C:\Users\Fernando\Desktop\nando-blog\obj\Debug\net5.0\my-blog.genruntimeconfig.cache
+C:\Users\Fernando\Desktop\nando-blog\bin\Debug\net5.0\appsettings.Production.Development.json
+C:\Users\Fernando\Desktop\nando-blog\bin\Debug\net5.0\appsettings.Production.json
+C:\Users\Fernando\Desktop\nando-blog\obj\Debug\net5.0\my-blog.csproj.AssemblyReference.cache

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GI49vKAfbk8obeVriNvDbqG1yiaCWNcK3p4xkSaY/vzEkr8SPpTZdWnHt7cZtmhahfS6Qnee/Q+2gqWsfqw7/Q==",
+  "dgSpecHash": "dPqUXUbY/5C2eMujK7nLfsSZzIuANBcWmpVoVZi9kzSRVLUN/tyqbvSBWbt3KVDtQNaudiM1/oqKD+ZC6yCmUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Fernando\\Desktop\\nando-blog\\my-blog.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,7 @@
     "C:\\Users\\Fernando\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\npgsql\\5.0.7\\npgsql.5.0.7.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\5.0.7\\npgsql.entityframeworkcore.postgresql.5.0.7.nupkg.sha512",
+    "C:\\Users\\Fernando\\.nuget\\packages\\photosauce.magicscaler\\0.12.2\\photosauce.magicscaler.0.12.2.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\Fernando\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",

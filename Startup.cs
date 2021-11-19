@@ -34,6 +34,10 @@ namespace my_blog
             services.AddTransient<IBlogRepository, BlogRepository>();
             services.AddTransient<IFileManager, FileManager>();
             services.AddMvc(options => options.EnableEndpointRouting = false);
+            services.AddMvc(options => 
+            {
+                options.CacheProfiles.Add("Monthly", new Microsoft.AspNetCore.Mvc.CacheProfile {Duration = 60 * 60 * 24 * 7 * 4});
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

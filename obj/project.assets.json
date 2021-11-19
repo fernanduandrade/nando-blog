@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
+    "net6.0": {
       "Humanizer.Core/2.8.26": {
         "type": "package",
         "compile": {
@@ -337,6 +337,15 @@
         },
         "runtime": {
           "lib/netstandard2.1/Npgsql.EntityFrameworkCore.PostgreSQL.dll": {}
+        }
+      },
+      "PhotoSauce.MagicScaler/0.12.2": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/PhotoSauce.MagicScaler.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/PhotoSauce.MagicScaler.dll": {}
         }
       },
       "System.Collections.Immutable/5.0.0": {
@@ -951,6 +960,33 @@
         "postgresql.png"
       ]
     },
+    "PhotoSauce.MagicScaler/0.12.2": {
+      "sha512": "MgCwnM8Tftm5qHNF88nuR8tWIAg5a1q1W/iJ3fQ/9gYI+Hjh14X/9lHuPc3YDGp6K9b+hfNfk2SXLXaVYdxMsw==",
+      "type": "package",
+      "path": "photosauce.magicscaler/0.12.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/PhotoSauce.MagicScaler.dll",
+        "lib/net461/PhotoSauce.MagicScaler.xml",
+        "lib/net472/PhotoSauce.MagicScaler.dll",
+        "lib/net472/PhotoSauce.MagicScaler.xml",
+        "lib/net5.0/PhotoSauce.MagicScaler.dll",
+        "lib/net5.0/PhotoSauce.MagicScaler.xml",
+        "lib/netcoreapp2.1/PhotoSauce.MagicScaler.dll",
+        "lib/netcoreapp2.1/PhotoSauce.MagicScaler.xml",
+        "lib/netcoreapp3.1/PhotoSauce.MagicScaler.dll",
+        "lib/netcoreapp3.1/PhotoSauce.MagicScaler.xml",
+        "lib/netstandard2.0/PhotoSauce.MagicScaler.dll",
+        "lib/netstandard2.0/PhotoSauce.MagicScaler.xml",
+        "lib/netstandard2.1/PhotoSauce.MagicScaler.dll",
+        "lib/netstandard2.1/PhotoSauce.MagicScaler.xml",
+        "package/PhotoSauce.png",
+        "package/license",
+        "photosauce.magicscaler.0.12.2.nupkg.sha512",
+        "photosauce.magicscaler.nuspec"
+      ]
+    },
     "System.Collections.Immutable/5.0.0": {
       "sha512": "FXkLXiK0sVVewcso0imKQoOxjoPAj42R8HtjjbSjVPAzwDfzoyoznWxgA3c38LDbN9SJux1xXoXYAhz98j7r2g==",
       "type": "package",
@@ -1122,12 +1158,13 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0": [
+    "net6.0": [
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.9",
       "Microsoft.AspNetCore.Identity.UI >= 5.0.9",
       "Microsoft.EntityFrameworkCore >= 5.0.9",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.9",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 5.0.7"
+      "Npgsql.EntityFrameworkCore.PostgreSQL >= 5.0.7",
+      "PhotoSauce.MagicScaler >= 0.12.2"
     ]
   },
   "packageFolders": {
@@ -1136,26 +1173,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Fernando\\Desktop\\nando-blog\\my-blog.csproj",
+      "projectUniqueName": "c:\\Users\\Fernando\\Desktop\\nando-blog\\my-blog.csproj",
       "projectName": "my-blog",
-      "projectPath": "C:\\Users\\Fernando\\Desktop\\nando-blog\\my-blog.csproj",
+      "projectPath": "c:\\Users\\Fernando\\Desktop\\nando-blog\\my-blog.csproj",
       "packagesPath": "C:\\Users\\Fernando\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Fernando\\Desktop\\nando-blog\\obj\\",
+      "outputPath": "c:\\Users\\Fernando\\Desktop\\nando-blog\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Fernando\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Fernando\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       },
@@ -1166,8 +1201,8 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
@@ -1188,6 +1223,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[5.0.7, )"
+          },
+          "PhotoSauce.MagicScaler": {
+            "target": "Package",
+            "version": "[0.12.2, )"
           }
         },
         "imports": [
@@ -1208,7 +1247,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

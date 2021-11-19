@@ -7,7 +7,13 @@
     <title>@ViewBag.Title</title>
     <meta name="description" content="@ViewBag.Description" />
     <meta name="keywords" content="@ViewBag.Keywords" />
-    <link rel="stylesheet" href="~/css/style.css" />
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/style.css" />
+    </environment>
+    <environment include="Production">
+        <link rel="stylesheet" href="~/css/style.min.css" />
+    </environment>
+    
 </head>
 <body>
     <div>
