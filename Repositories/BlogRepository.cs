@@ -38,7 +38,7 @@ namespace my_blog.Repositories
         public IndexViewModel GetAllPosts(int pageNumber, string category)
         {
             Func<Post, bool> InCategory = (post) => {return post.Category.ToLower().Equals(category.ToLower());};
-            int pageSize = 5;
+            int pageSize = 2;
             int skipAmount = pageSize * (pageNumber - 1);
             int capacity = skipAmount * pageSize;
             var query = _ctx.Post.AsQueryable();
@@ -47,11 +47,12 @@ namespace my_blog.Repositories
                 query = query.Where(x => InCategory(x));
 
             int postsCount = query.Count();
-
+            int pageCount = (int) Math.Ceiling(postsCount * 1.0 / pageSize);
             return new IndexViewModel
             {
                 PageNumber = pageNumber,
-                PageCount = (int) Math.Ceiling(postsCount * 1.0 / pageSize),
+                PageCount = pageCount,
+                Pages = PageNumbers(pageNumber, postsCount),
                 Category = category,
                 NextPage = postsCount > capacity,
                 Posts = query
@@ -88,6 +89,36 @@ namespace my_blog.Repositories
         public void UpdatePost(Post post)
         {
             _ctx.Post.Update(post);
+        }
+        private IEnumerable<int> PageNumbers(int pageNumber, int pageCount)
+        {
+            int midPoint = pageNumber < 3 ? 3 : pageNumber > pageCount - 2 ? pageCount -2 : pageNumber;
+            int lowerBound = midPoint - 2;
+            int upperBound = midPoint + 2;
+
+            if(lowerBound != 1)
+            {
+                yield return 1;
+                if(lowerBound - 1 > 1)
+                {
+                    yield return -1;
+                }
+            }
+
+            for(int i = midPoint - 2; i <= midPoint + 2; i++)
+            {
+                yield return i;
+            }
+
+            if(upperBound != pageCount )
+            {
+                if(pageCount - upperBound > 1)
+                {
+                    yield return -1;
+                }
+
+                yield return pageCount;
+            }
         }
     }
 }

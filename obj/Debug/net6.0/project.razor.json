@@ -16313,6 +16313,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Fernando\\Desktop\\nando-blog\\Views\\Shared\\_BlogPagination.cshtml",
+      "TargetPath": "Views\\Shared\\_BlogPagination.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Fernando\\Desktop\\nando-blog\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"

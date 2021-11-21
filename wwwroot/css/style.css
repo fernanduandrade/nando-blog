@@ -102,3 +102,8 @@ nav a {
 .pages a.active {
     background: #ccc;
 }
+
+.dots {
+    color: #fff;
+    font-size: 23px;
+}
