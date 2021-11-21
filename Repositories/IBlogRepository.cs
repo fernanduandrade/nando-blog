@@ -10,7 +10,7 @@ namespace my_blog.Repositories
     {
         Post GetPost(int id);
         List<Post> GetAllPosts();
-        IndexViewModel GetAllPosts(int pageNumberm, string category);
+        IndexViewModel GetAllPosts(int pageNumberm, string category, string search);
         void RemovePost(int id);
         void AddSubComment(SubComment subComment);
         void UpdatePost(Post post);

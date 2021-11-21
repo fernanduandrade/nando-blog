@@ -11,6 +11,13 @@
 
 <div class="main-img"> 
     <span class="title">Meu blog Lindo</span>
+    <form asp-controller="Home" asp-action="Index" method="get">
+        <input class="search" type="hidden" name="pageNumber" value="@Model.PageNumber" placeholder="pesquisar artigo">
+        <input class="search" type="hidden" name="category" value="@Model.Category" placeholder="pesquisar artigo">
+        <input class="search" type="text" name="search" placeholder="pesquisar artigo" value="@Model.Search">
+        <button class="submit-btn">Serach</button>
+    </form>
+    
 </div>
 
 <div class="container">
