@@ -17,4 +17,4 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Build
-      run: dotnet build ../my-blog.csproj --no-restore
+      run: dotnet build my-blog.csproj --no-restore
