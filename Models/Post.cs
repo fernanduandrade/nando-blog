@@ -1,5 +1,6 @@
 using System;
-
+using System.Collections.Generic;
+using nando_blog.Models.Comments;
 namespace my_blog.Models
 {
     public class Post
@@ -12,5 +13,6 @@ namespace my_blog.Models
         public string Tags {get; set;} = "";
         public string Description {get; set;} = "";
         public DateTime Created { get; set; } = DateTime.Now;
+        public List<MainComment> MainComments {get; set;}
     }
 }

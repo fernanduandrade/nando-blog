@@ -2,8 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using my_blog.Data;
 using my_blog.Models;
+using my_blog.ViewModels;
+using nando_blog.Models.Comments;
 
 namespace my_blog.Repositories
 {
@@ -21,21 +24,48 @@ namespace my_blog.Repositories
             _ctx.Add(post);
         }
 
-        public List<Post> GetAllPosts()
+        public void AddSubComment(SubComment subComment)
         {
-            return _ctx.Post.ToList();
+            _ctx.SubComments.Add(subComment);
         }
 
-        public List<Post> GetAllPosts(string category)
+        public List<Post> GetAllPosts()
         {
             return _ctx.Post
-                .Where(post=> post.Category.ToLower().Equals(category.ToLower()))
                 .ToList();
+        }
+
+        public IndexViewModel GetAllPosts(int pageNumber, string category)
+        {
+            Func<Post, bool> InCategory = (post) => {return post.Category.ToLower().Equals(category.ToLower());};
+            int pageSize = 5;
+            int skipAmount = pageSize * (pageNumber - 1);
+            int capacity = skipAmount * pageSize;
+            var query = _ctx.Post.AsQueryable();
+            
+            if(!string.IsNullOrEmpty(category))
+                query = query.Where(x => InCategory(x));
+
+            int postsCount = query.Count();
+
+            return new IndexViewModel
+            {
+                PageNumber = pageNumber,
+                Category = category,
+                NextPage = postsCount > capacity,
+                Posts = query
+                    .Skip(skipAmount)
+                    .Take(pageSize)
+                    .ToList()
+            };
         }
 
         public Post GetPost(int id)
         {
-            return _ctx.Post.FirstOrDefault(post => post.Id == id);
+            return _ctx.Post
+            .Include(p => p.MainComments)
+                .ThenInclude(mainComments => mainComments.SubComments)
+            .FirstOrDefault(post => post.Id == id);
         }
 
         public void RemovePost(int id)
