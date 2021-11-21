@@ -7,6 +7,7 @@ namespace my_blog.ViewModels
     {
         public int PageNumber {get; set;}
         public bool NextPage {get; set;}
+        public int PageCount {get; set;}
         public string Category {get; set;}
         public IEnumerable<Post> Posts { get; set; }
     }

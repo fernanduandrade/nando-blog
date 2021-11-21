@@ -79,3 +79,26 @@ nav a {
 .no-shadow {
     box-shadow: none;
 }
+
+.pages {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.pages a {
+    padding: 1rem;
+    background-color: grey;
+    color: #fff;
+    border: 1px solid #eee;
+    margin: 0 0.25rem
+}
+
+.pages a:hover {
+    text-decoration: none;
+    background-color: #999;
+}
+
+.pages a.active {
+    background: #ccc;
+}

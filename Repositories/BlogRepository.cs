@@ -51,6 +51,7 @@ namespace my_blog.Repositories
             return new IndexViewModel
             {
                 PageNumber = pageNumber,
+                PageCount = (int) Math.Ceiling(postsCount * 1.0 / pageSize),
                 Category = category,
                 NextPage = postsCount > capacity,
                 Posts = query
