@@ -7,6 +7,7 @@ using my_blog.Data;
 using my_blog.Models;
 using my_blog.ViewModels;
 using nando_blog.Models.Comments;
+using System.Globalization;
 
 namespace my_blog.Repositories
 {
@@ -38,18 +39,18 @@ namespace my_blog.Repositories
         public IndexViewModel GetAllPosts(int pageNumber, string category, string search)
         {
             Func<Post, bool> InCategory = (post) => {return post.Category.ToLower().Equals(category.ToLower());};
-            int pageSize = 2;
+            int pageSize = 10;
             int skipAmount = pageSize * (pageNumber - 1);
-            int capacity = skipAmount * pageSize;
             var query = _ctx.Post.AsNoTracking().AsQueryable();
             
-            if(!string.IsNullOrEmpty(category))
-                query = query.Where(x => InCategory(x));
+            if (!String.IsNullOrEmpty(category))
+                query = query.Where(x => x.Category.Equals(category));
 
-            if(!string.IsNullOrEmpty(search))
-                query = query.Where(x =>  EF.Functions.Like(x.Title, $"%{search}%")
+            if (!String.IsNullOrEmpty(search))
+                query = query.Where(x => EF.Functions.Like(x.Title, $"%{search}%")
                                     || EF.Functions.Like(x.Body, $"%{search}%") 
                                     || EF.Functions.Like(x.Description, $"%{search}%"));
+
 
             int postsCount = query.Count();
             int pageCount = (int) Math.Ceiling(postsCount * 1.0 / pageSize);
@@ -58,9 +59,9 @@ namespace my_blog.Repositories
                 PageNumber = pageNumber,
                 PageCount = pageCount,
                 Search = search,
-                Pages = PageNumbers(pageNumber, postsCount),
+                Pages = PageNumbers(pageNumber, postsCount).ToList(),
                 Category = category,
-                NextPage = postsCount > capacity,
+                NextPage = postsCount > skipAmount + pageSize,
                 Posts = query
                     .Skip(skipAmount)
                     .Take(pageSize)
