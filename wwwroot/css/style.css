@@ -8,7 +8,7 @@
 
 html {
     box-sizing: border-box;
-    font-size: 62.5%;
+    font-size: 16px;
 }
 
 body {
@@ -45,6 +45,7 @@ body {
 
 .sidebar__nav {
     list-style: none;
+    align-self: center;
 }
 
 .sidebar__link  {
@@ -54,6 +55,7 @@ body {
     display: inline-block;
     padding: 1.5rem;
     transition: all .2s;
+    font-size: 1rem;
 }
 
 .sidebar__link:hover {
@@ -83,15 +85,20 @@ body {
 .sidebar__title {
     text-transform: uppercase;
     color: #ffffff;
-    font-size: 1.5rem;    
+    font-size: 1.4rem;
+    font-weight: bold;    
+    text-align: center;
+    padding-top: 3rem;
 }
 
 .post {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2rem 5rem rgba(0,0,0,0.1);
+    word-wrap: break-word
 }
 
 .post:not(:last-child) {
@@ -104,6 +111,7 @@ body {
 }
 
 .post__title {
+    font-size: 1.5rem;
     transition: all .2s;
 }
 .post__title:hover {
