@@ -14,7 +14,6 @@ html {
 body {
     font-weight: 300;
     line-height: 1.6;
-    background-color: #f9f7f6;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -26,6 +25,9 @@ body {
     overflow-y: scroll;
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #faf9f9;
 }
 
 .sidebar   {
@@ -63,6 +65,21 @@ body {
     transform: translateY(-2px);
 }
 
+.sidebar__icon-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sidebar__icon:hover {
+    transition: all .2s;
+}
+.sidebar__icon:hover {
+    transform: translateY(-2px) scale(1.5);
+}
+.sidebar__icon:active {
+    transform: translateY(-2px) scale(1.5);
+}
+
 .sidebar__title {
     text-transform: uppercase;
     color: #ffffff;
@@ -72,6 +89,13 @@ body {
 .post {
     display: flex;
     flex-direction: column;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2rem 5rem rgba(0,0,0,0.1);
+}
+
+.post:not(:last-child) {
+    margin-bottom: 1.5rem; 
 }
 
 .post__link {
@@ -96,13 +120,17 @@ body {
     font-size: 1.1rem;
     color: inherit;
 }
-
+/* 
 .post-body {
-    margin: -5px 5px 0;
-    padding: 20px 5px;
     background-color: #ffffff;
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+} */
+
+.socials {
+    display: flex;
+    font-size: 1.5rem;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
 }
 
 .pages {
@@ -138,7 +166,7 @@ body {
 }
 
 .search::placeholder {
-    color: #fff;
+    color: red;
 }
 
 .copyright {

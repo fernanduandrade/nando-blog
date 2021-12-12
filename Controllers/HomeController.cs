@@ -76,5 +76,8 @@ namespace my_blog.Controllers
 
             return RedirectToAction("Post", new {id = viewModel.PostId});
         }
+
+        [HttpGet]
+        public IActionResult About() => View();
     }
 }
