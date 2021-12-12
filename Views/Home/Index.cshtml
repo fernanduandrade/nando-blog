@@ -17,11 +17,19 @@
     
     @foreach (var post in Model.Posts)
     {
-        <a class="post" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
-            <span class="title">
-                @post.Title
-            </span>
-        </a>
+        <div class="post">
+            <a class="post__link" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
+                <h2>@post.Title</h2>
+                <p class="post__description">@post.Description</p>
+
+
+            </a>
+
+            <div class="post__time">
+                <time>@post.Created</time>
+            </div>
+        </div>
+        
     }
 
     <partial name="_BlogPagination" model="Model" />
