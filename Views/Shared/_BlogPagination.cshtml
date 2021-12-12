@@ -1,29 +1,17 @@
 @model IndexViewModel
 
 <div class="pages">
+    <p>Página @Model.PageNumber de @Model.PageCount</p>
     @if(Model.PageNumber > 1)
     {
         <a asp-action="Index" asp-controller="Home" asp-route-category="@Model.Category"
-           asp-route-search="@Model.Search" asp-route-pageNumber="@(Model.PageNumber - 1)">&#x3c;</a>
+           asp-route-search="@Model.Search" asp-route-pageNumber="@(Model.PageNumber - 1)">pots mais recentes</a>
     }
-    @foreach(int p in Model.Pages)
-    {
-        if(p == -1)
-        {
-            <span class="dots">...</span>
-        }
-        else 
-        {
-            <a class='@(p == Model.PageCount ? "active" : "")' asp-action="Index" asp-controller="Home" asp-route-category="@Model.Category" 
-                asp-route-search="@Model.Search" asp-route-pageNumber="@p">@p</a>
-        }
-        
-            
-    }
+
     @if(Model.NextPage)
     {
         <a asp-action="Index" asp-controller="Home" asp-route-category="@Model.Category" 
-            asp-route-search="@Model.Search" asp-route-pageNumber="@(Model.PageNumber + 1)">&#x3e;</a>
+            asp-route-search="@Model.Search" asp-route-pageNumber="@(Model.PageNumber + 1)">posts mais antigos</a>
     }
     
 </div>

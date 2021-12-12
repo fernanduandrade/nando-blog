@@ -18,15 +18,13 @@
     @foreach (var post in Model.Posts)
     {
         <div class="post">
-            <a class="post__link" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
-                <h2>@post.Title</h2>
+            <a class="post__link" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id" title="@post.Title">
+                <h2 class="post__title">@post.Title</h2>
                 <p class="post__description">@post.Description</p>
-
-
             </a>
-
-            <div class="post__time">
-                <time>@post.Created</time>
+            
+            <div class="post__date">
+                <time>@post.Created.ToString("dd/MM/yyyy")</time>
             </div>
         </div>
         

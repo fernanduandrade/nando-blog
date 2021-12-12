@@ -18,27 +18,37 @@
 </head>
 <body>
     <div class="container">
-        <nav>
-            <div class="nav__items">
-                <p class="nav__title">Fernando Andrade </p>
-                
-                <a class="nav__link" asp-controller="Home" asp-action="Index">Home</a>
-                <a class="nav__link" asp-controller="Home" asp-action="Index" asp-route-category="Programming">Programming</a>  
-                <a class="nav__link" asp-controller="Home" asp-action="Index" asp-route-category="Study">Study</a> 
-                
+        <div class="sidebar">
+            <p class="sidebar__title">Fernando Andrade </p>
+            <ul class="sidebar__nav">
+                <li>
+                    <a class="sidebar__link" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li>
+                    <a class="sidebar__link" asp-controller="Home" asp-action="Index" asp-route-category="Programming">Programming</a>
+                </li>
+
+                <li>
+                    <a class="sidebar__link" asp-controller="Home" asp-action="Index" asp-route-category="Study">Study</a> 
+                </li>
+                        
                 @if(User.Identity.IsAuthenticated) 
                 {
-                    <a class="nav__link" asp-controller="Panel" asp-action="Index">Painel</a>
-                    <a class="nav__link" asp-controller="Auth" asp-action="Logout">Sair</a>
+                    <li>
+                        <a class="sidebar__link" asp-controller="Panel" asp-action="Index">Painel</a>
+                    </li>
+                    <li>
+                        <a class="sidebar__link" asp-controller="Auth" asp-action="Logout">Sair</a>
+                    </li>
                 }
-            </div>
+            </ul>
 
             <div class="copyright">
                 &copy; 2021 por Fernando Andrade. Todos direitos reservados.
             </div>
-        </nav>
+        </div>
     
-        <div>
+        <div class="content">
             @RenderBody()   
         </div>
 
