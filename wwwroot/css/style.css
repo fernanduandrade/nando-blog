@@ -32,7 +32,7 @@ body {
 
 .sidebar   {
     background-color: #101d2c;
-    flex: 0 0 20%;
+    flex: 0 0 15%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -60,7 +60,7 @@ body {
 
 .sidebar__link:hover {
     background-color: rgba(255, 255, 255, 0.05);
-    transform: translateY(-2px);
+    transform: translateY(-4px);
 }
 .sidebar__link:active {
     background-color: rgba(255, 255, 255, 0.05);
@@ -93,12 +93,18 @@ body {
 
 .post {
     display: flex;
+    padding: 1.5rem;
     flex-direction: column;
     justify-content: center;
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 2rem 5rem rgba(0,0,0,0.1);
     word-wrap: break-word
+}
+
+.post__content {
+    margin: 2rem 0;
+    max-width: 65rem;
 }
 
 .post:not(:last-child) {
@@ -119,6 +125,7 @@ body {
 }
 
 .post__date {
+    margin-top: .5rem;
     font-size: 1rem;
     color: #ccc;
     font-weight: bold;
@@ -128,10 +135,6 @@ body {
     font-size: 1.1rem;
     color: inherit;
 }
-/* 
-.post-body {
-    background-color: #ffffff;
-} */
 
 .socials {
     display: flex;
@@ -141,26 +144,49 @@ body {
     list-style: none;
 }
 
-.pages {
+.pagination {
     display: flex;
-    justify-content: center;
+    justify-content: start;
+    align-items: center;
     margin: 2rem 0;
 }
 
-.pages a {
-    padding: 1rem;
-    background-color: grey;
-    color: #fff;
-    border: 1px solid #eee;
-    margin: 0 0.25rem
-}
-
-.pages a:hover {
+.pagination__link{
     text-decoration: none;
-    background-color: #999;
+    padding: 1rem;
+    background-color: #101d2c;
+    color: #fff;
+    border-radius: 13px;
+    font-weight: bold;
+    transition: all .2s;
 }
 
-.search {
+.pagination__link:hover {
+    background-color: #1d3652;
+    transform: translateY(-2px);
+}
+
+.pagination__link:active {
+    background-color: #1d3652;
+    transform: translateY(-2px);
+}
+
+.pagination__link:visited {
+    transform: translateY(2px);
+}
+
+.pagination__text {
+    font-size: 1.1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+/* .pagination a:hover {
+    
+    background-color: #999;
+} */
+
+/* .search {
     color: #000;
     background-color: transparent;
     border: none;
@@ -175,7 +201,7 @@ body {
 
 .search::placeholder {
     color: red;
-}
+} */
 
 .copyright {
     font-size: 1rem;
