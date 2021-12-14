@@ -9,16 +9,43 @@
 }
 
 
-<div class="container">
-    <div class="post no-shadow">
+<div class="post__section">
+    <div class="heading__post">
+        <form>
+            <button class="pagination__link mt-sm" asp-action="Index" asp-controller="Home" asp-route-category="@Model.Category">&#8592; voltar</button>
+        </form>
+        
+        @{
+            DateTime today = DateTime.Now;
+            TimeSpan daysAgo = Model.Created.Subtract(today);
+        }
+
+        @if(daysAgo.Days == 0) {
+            <div class="ml-sm">
+                <p>hoje em <span class="post_category">@Model.Category.ToLower()</span></p> 
+            </div>
+        }
+        else
+        {
+            <div class="ml-sm"> 
+                <p><time class="post__date">@daysAgo.Days</time> dias atrás em <div class="post_category">@Model.Category</div></p> 
+            </div>
+        }
+    </div>
+    
+    
+    
+    @* <div class=""> 
         @if (!String.IsNullOrEmpty(Model.Image))
         {
             var imgPath = $"{basePath}/Image/{Model.Image}";
             <img src="@imgPath"/>
-            <span class="title">@Model.Title</span>
+            
         }
-    </div>
-    <div class="post-body">
+    </div> *@
+
+    <div class="post__body">
+        <h1 class="heading__title mb-sm">@Model.Title</h1>
         @Html.Raw(@Model.Body)
     </div>
     <div class="comment-section">
