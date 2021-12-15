@@ -48,29 +48,39 @@
         <h1 class="heading__title mb-sm">@Model.Title</h1>
         @Html.Raw(@Model.Body)
     </div>
-    <div class="comment-section">
-        @{
-            await Html.RenderPartialAsync("_MainComment", new CommentViewModel {PostId = Model.Id, MainCommentId = 0});
-        }
+    <div class="comment mb-sm">
+        <div class="comment__add">
+            @{
+                await Html.RenderPartialAsync("_MainComment", new CommentViewModel {PostId = Model.Id, MainCommentId = 0});
+            }
+        </div>
         @foreach (var comment in Model.MainComments)
         {
-            <p>
-              @comment.Message --- @comment.Created  
-            </p>
-            <div>
-                <h4>Sub Commments</h4>
-                @{
-                    await Html.RenderPartialAsync("_MainComment", new CommentViewModel {PostId = Model.Id, MainCommentId = comment.Id});
-                }
+            <div class="comment__section">
+                <time class="comment__date">@comment.Created.ToString("dd/MM/yyyy - HH:mm")</time>
+                <p class="comment__text">
+                    @comment.Message
+                </p>
 
-                @foreach (var subcomment in comment.SubComments)
-                {
-                    <p>
-                        @subcomment.Message --- @subcomment.Created  
-                    </p>
-                }
+                <div class="comment__section--subcomment">
+                    @foreach (var subcomment in comment.SubComments)
+                    {
+                        <div>
+                            <time class="comment__date">@subcomment.Created.ToString("dd/MM/yyyy - HH:mm")</time>
+                            <p class="comment__text">
+                                @subcomment.Message
+                            </p>
+                        </div>
+                    }
+
+                    <div class="subcomment__add">
+                        @{
+                            await Html.RenderPartialAsync("_MainComment", new CommentViewModel {PostId = Model.Id, MainCommentId = comment.Id});
+                        }
+                    </div>
+                    
+                </div>
             </div>
-
         }
     </div>
 </div>
