@@ -17,18 +17,19 @@
         
         @{
             DateTime today = DateTime.Now;
-            TimeSpan daysAgo = Model.Created.Subtract(today);
-        }
+            TimeSpan days = Model.Created.Subtract(today);
+            int daysAgo = Math.Abs((int)days.TotalDays);
+        }   
 
-        @if(daysAgo.Days == 0) {
+        @if(daysAgo == 0) {
             <div class="ml-sm">
                 <p>hoje em <span class="post_category">@Model.Category.ToLower()</span></p> 
             </div>
         }
         else
         {
-            <div class="ml-sm"> 
-                <p><time class="post__date">@daysAgo.Days</time> dias atrás em <div class="post_category">@Model.Category</div></p> 
+            <div class="ml-sm">     
+                <span>@daysAgo dias atrás em</span> <span class="post__category">@Model.Category</span> 
             </div>
         }
     </div>
@@ -54,6 +55,7 @@
                 await Html.RenderPartialAsync("_MainComment", new CommentViewModel {PostId = Model.Id, MainCommentId = 0});
             }
         </div>
+        <button class="btn__add" onclick="showTextArea('.comment__add')">Adicionar comentário &plus;</button>
         @foreach (var comment in Model.MainComments)
         {
             <div class="comment__section">
@@ -62,7 +64,7 @@
                     @comment.Message
                 </p>
 
-                <div class="comment__section--subcomment">
+                @* <div class="comment__section--subcomment">
                     @foreach (var subcomment in comment.SubComments)
                     {
                         <div>
@@ -71,6 +73,7 @@
                                 @subcomment.Message
                             </p>
                         </div>
+                        <button class="btn__add" onclick="showTextArea('.subcomment__add')">Responder comentário </button>
                     }
 
                     <div class="subcomment__add">
@@ -78,9 +81,11 @@
                             await Html.RenderPartialAsync("_MainComment", new CommentViewModel {PostId = Model.Id, MainCommentId = comment.Id});
                         }
                     </div>
-                    
-                </div>
+                </div> *@
             </div>
         }
     </div>
 </div>
+<script>
+    const showTextArea = element => document.querySelector(element).style.display = 'block';
+</script>
