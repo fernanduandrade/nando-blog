@@ -12,7 +12,7 @@
 <div class="post__section">
     <div class="heading__post">
         <form>
-            <button class="pagination__link mt-sm" asp-action="Index" asp-controller="Home" asp-route-category="@Model.Category">&#8592; voltar</button>
+            <button class="pagination__link mt-sm" asp-action="Index" asp-controller="Home">&#8592; voltar</button>
         </form>
         
         @{
@@ -23,13 +23,17 @@
 
         @if(daysAgo == 0) {
             <div class="ml-sm">
-                <p>hoje em <span class="post_category">@Model.Category.ToLower()</span></p> 
+                <form>
+                    <span>hoje em em</span> <button asp-controller="Home" asp-action="Index" asp-route-category="@Model.Category" class="post__category" title="@Model.Category">@Model.Category</button>
+                </form>
             </div>
         }
         else
         {
-            <div class="ml-sm">     
-                <span>@daysAgo dias atrás em</span> <span class="post__category">@Model.Category</span> 
+            <div class="ml-sm"> 
+                <form>    
+                    <span>@daysAgo dias atrás em</span> <button asp-controller="Home" asp-action="Index" asp-route-category="@Model.Category" class="post__category" title="@Model.Category">@Model.Category</button>
+                </form>
             </div>
         }
     </div>

@@ -22,16 +22,24 @@
         <div class="sidebar">
             <p class="sidebar__title">Fernando Andrade </p>
             <ul class="sidebar__nav">
-                <li class="test">
+                <li>
                     <a class="sidebar__link" asp-controller="Home" asp-action="Index">Home</a>
                 </li>
-                @* <li>
-                    <a class="sidebar__link" asp-controller="Home" asp-action="Index" asp-route-category="Programming">Programming</a>
-                </li>
+                <div class="dropdown">
+                    <button class="btn-dropdown">categorias</button>
+                    <div class="dropdown__content">
+                        <li>
+                            <a class="dropdown__category" asp-controller="Home" asp-action="Index" asp-route-category="Programming">Programming</a>
+                        </li>
 
-                <li>
-                    <a class="sidebar__link" asp-controller="Home" asp-action="Index" asp-route-category="Study">Study</a>  *@
-                </li>
+                        <li>
+                            <a class="dropdown__category" asp-controller="Home" asp-action="Index" asp-route-category="Study">Study</a>  
+                        </li>
+                    </div>
+                </div> 
+                
+                
+
                 <li>
                     <a class="sidebar__link" asp-controller="Home" asp-action="About" >Sobre</a> 
                 </li>
