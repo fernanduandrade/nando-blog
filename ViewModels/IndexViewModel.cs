@@ -11,6 +11,7 @@ namespace my_blog.ViewModels
         public bool NextPage {get; set;}
         public int PageCount {get; set;}
         public string Category {get; set;}
+        public string Slug { get; set; }
         public IEnumerable<Post> Posts { get; set; }
     }
 }
