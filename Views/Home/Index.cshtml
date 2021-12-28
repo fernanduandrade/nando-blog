@@ -13,12 +13,13 @@
         <input class="search" type="hidden" name="category" value="@Model.Category" placeholder="pesquisar artigo">
         <input class="search" type="text" name="search" placeholder="pesquisar artigo" value="@Model.Search">
         <button class="submit-btn">Search</button>
-    </form> *@
+    </form> 
+    asp-route-slug="@post.Slug"*@
     
     @foreach (var post in Model.Posts)
     {
         <div class="post">
-            <a class="post__link" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id" title="@post.Title">
+            <a class="post__link" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id" asp-route-slug="@post.Slug" title="@post.Title">
                 <h2 class="post__title">@post.Title</h2>
                 <p class="post__description">@post.Description</p>
             </a>

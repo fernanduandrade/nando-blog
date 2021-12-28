@@ -32,11 +32,10 @@ namespace my_blog.Controllers
             return View(vm);
         }
             
-
-        public IActionResult Post(int id) =>
-            View(_repository.GetPost(id));
-
-
+        [Route("/{id}/{slug}")]
+        public IActionResult Post(int id) => View(_repository.GetPost(id));
+        
+        
         [HttpGet("/Image/{image}")]
         [ResponseCache(CacheProfileName="Monthly")]
         public IActionResult Image(string image) =>
