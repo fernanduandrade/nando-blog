@@ -51,42 +51,6 @@
         <h1 class="heading__title mb-sm">@Model.Title</h1>
         @Html.Raw(@Model.Body)
     </div>
-    <div class="comment mb-sm">
-        <div class="comment__add">
-            @{
-                await Html.RenderPartialAsync("_MainComment", new CommentViewModel {PostId = Model.Id, MainCommentId = 0});
-            }
-        </div>
-        <button class="btn__add" onclick="showTextArea('.comment__add')">Adicionar comentário &plus;</button>
-        @foreach (var comment in Model.MainComments)
-        {
-            <div class="comment__section">
-                <time class="comment__date">@comment.Created.ToString("dd/MM/yyyy - HH:mm")</time>
-                <p class="comment__text">
-                    @comment.Message
-                </p>
-
-                @* <div class="comment__section--subcomment">
-                    @foreach (var subcomment in comment.SubComments)
-                    {
-                        <div>
-                            <time class="comment__date">@subcomment.Created.ToString("dd/MM/yyyy - HH:mm")</time>
-                            <p class="comment__text">
-                                @subcomment.Message
-                            </p>
-                        </div>
-                        <button class="btn__add" onclick="showTextArea('.subcomment__add')">Responder comentário </button>
-                    }
-
-                    <div class="subcomment__add">
-                        @{
-                            await Html.RenderPartialAsync("_MainComment", new CommentViewModel {PostId = Model.Id, MainCommentId = comment.Id});
-                        }
-                    </div>
-                </div> *@
-            </div>
-        }
-    </div>
 </div>
 <script>
     const showTextArea = element => document.querySelector(element).style.display = 'block';

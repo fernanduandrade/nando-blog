@@ -6,7 +6,6 @@ using my_blog.Models;
 using my_blog.Repositories;
 using my_blog.ViewModels;
 using System.Collections.Generic;
-using nando_blog.Models.Comments;
 using System;
 
 namespace my_blog.Controllers
@@ -41,41 +40,6 @@ namespace my_blog.Controllers
         public IActionResult Image(string image) =>
             new FileStreamResult(_filemanager.ImageStream(image),$"image/{image.Substring(image.LastIndexOf('.') + 1)}");
 
-
-        [Route("add-comment")]
-        [HttpPost]
-        public async Task<IActionResult> Comment(CommentViewModel viewModel) 
-        {
-            if(!ModelState.IsValid)
-                return RedirectToAction("Post", new {id = viewModel.PostId});
-
-            var post = _repository.GetPost(viewModel.PostId);
-            if(viewModel.MainCommentId == 0 )
-            {
-                post.MainComments = post.MainComments ?? new List<MainComment>();
-                post.MainComments.Add(new MainComment
-                {
-                    Message = viewModel.Message,
-                    Created = DateTime.Now,
-                });
-                _repository.UpdatePost(post);
-            }
-            else 
-            {
-                var comment = new SubComment
-                {
-                    MainCommentId = viewModel.MainCommentId,
-                    Message = viewModel.Message,
-                    Created = DateTime.Now,
-                };
-
-                _repository.AddSubComment(comment);
-            }
-
-            await _repository.SaveChangesAsync();
-
-            return RedirectToAction("Post", new {id = viewModel.PostId});
-        }
 
         [Route("/sobre")]
         [HttpGet]

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using my_blog.Data;
@@ -9,9 +10,10 @@ using my_blog.Data;
 namespace my_blog.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20211230231306_PostSlug")]
+    partial class PostSlug
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -249,6 +251,52 @@ namespace my_blog.Migrations
                     b.ToTable("Post");
                 });
 
+            modelBuilder.Entity("nando_blog.Models.Comments.MainComment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("text");
+
+                    b.Property<int?>("PostId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("MainComments");
+                });
+
+            modelBuilder.Entity("nando_blog.Models.Comments.SubComment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<DateTime>("Created")
+                        .HasColumnType("timestamp without time zone");
+
+                    b.Property<int>("MainCommentId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MainCommentId");
+
+                    b.ToTable("SubComments");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -298,6 +346,32 @@ namespace my_blog.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("nando_blog.Models.Comments.MainComment", b =>
+                {
+                    b.HasOne("my_blog.Models.Post", null)
+                        .WithMany("MainComments")
+                        .HasForeignKey("PostId");
+                });
+
+            modelBuilder.Entity("nando_blog.Models.Comments.SubComment", b =>
+                {
+                    b.HasOne("nando_blog.Models.Comments.MainComment", null)
+                        .WithMany("SubComments")
+                        .HasForeignKey("MainCommentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("my_blog.Models.Post", b =>
+                {
+                    b.Navigation("MainComments");
+                });
+
+            modelBuilder.Entity("nando_blog.Models.Comments.MainComment", b =>
+                {
+                    b.Navigation("SubComments");
                 });
 #pragma warning restore 612, 618
         }

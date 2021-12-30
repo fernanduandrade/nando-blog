@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using my_blog.Data;
 using my_blog.Models;
 using my_blog.ViewModels;
-using nando_blog.Models.Comments;
 using System.Globalization;
 
 namespace my_blog.Repositories
@@ -23,11 +22,6 @@ namespace my_blog.Repositories
         public void AddPost(Post post)
         {
             _ctx.Add(post);
-        }
-
-        public void AddSubComment(SubComment subComment)
-        {
-            _ctx.SubComments.Add(subComment);
         }
 
         public List<Post> GetAllPosts()
@@ -71,10 +65,7 @@ namespace my_blog.Repositories
 
         public Post GetPost(int id)
         {
-            return _ctx.Post
-            .Include(p => p.MainComments)
-                .ThenInclude(mainComments => mainComments.SubComments)
-            .FirstOrDefault(post => post.Id == id);
+            return _ctx.Post.FirstOrDefault(post => post.Id == id);
         }
 
         public void RemovePost(int id)

@@ -16333,11 +16333,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\Fernando\\Desktop\\nando-blog\\Views\\Home\\_MainComment.cshtml",
-      "TargetPath": "Views\\Home\\_MainComment.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "c:\\Users\\Fernando\\Desktop\\nando-blog\\Views\\Auth\\Login.cshtml",
       "TargetPath": "Views\\Auth\\Login.cshtml",
       "FileKind": "mvc"

@@ -279,53 +279,6 @@ body {
     
 }
 
-.comment {
-    padding: 1rem;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 2rem 5rem rgba(0,0,0,0.1);
-}
-
-.comment__text {
-    font-size: 1.1rem;
-}
-
-.comment__date {
-    color: #ccc;
-    font-size: .9rem;
-}
-
-.comment__section:not(:last-child) {
-    border-bottom: .5px solid #ccc;
-}
-
-.comment__section--subcomment {
-    margin-left: 2rem;
-}
-
-.comment__add {
-    display: none;
-}
-
-.comment__form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.comment__button {
-    text-decoration: none;
-    padding: .5rem;
-    background-color: #101d2c;
-    color: #fff;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all .2s;
-    text-transform: lowercase;
-    border: none;
-    cursor: pointer;
-}
-
 .copyright {
     font-size: 1rem;
     color: #aaa;

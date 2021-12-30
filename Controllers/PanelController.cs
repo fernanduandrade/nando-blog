@@ -88,6 +88,7 @@ namespace my_blog.Controllers
             }
         }
 
+        [Route("delete-post")]
         public async Task<IActionResult> Remove(int id)
         {
             _repository.RemovePost(id);
