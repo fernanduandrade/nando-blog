@@ -13,19 +13,22 @@ namespace my_blog.Controllers
             _signInManager = signInManager;
         }
 
+        [Route("/admin/login")]
         [HttpGet]
         public IActionResult Login()
         {
             return View(new LoginViewModel());
         }
 
+        [Route("/login")]
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel loginViewModel)
         {
             var result = await _signInManager.PasswordSignInAsync(loginViewModel.UserName, loginViewModel.Password, false, false);
-            return RedirectToAction("Index", "Panel");
+            return RedirectToAction("Index", "Panel", "/panel/admin");
         }
 
+        [Route("/logout")]
         [HttpGet]
         public async Task<IActionResult> Logout()
         {

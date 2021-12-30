@@ -5,7 +5,7 @@
 }
 
 <div class="comment__form">
-    <form method="post" asp-controller="Home" asp-action="Comment">
+    <form action="/add-comment" method="post">
         <div>
             <input asp-for="PostId" type="hidden" />
             <input asp-for="MainCommentId" type="hidden" />

@@ -42,6 +42,7 @@ namespace my_blog.Controllers
             new FileStreamResult(_filemanager.ImageStream(image),$"image/{image.Substring(image.LastIndexOf('.') + 1)}");
 
 
+        [Route("add-comment")]
         [HttpPost]
         public async Task<IActionResult> Comment(CommentViewModel viewModel) 
         {
@@ -76,6 +77,7 @@ namespace my_blog.Controllers
             return RedirectToAction("Post", new {id = viewModel.PostId});
         }
 
+        [Route("/sobre")]
         [HttpGet]
         public IActionResult About() => View();
     }

@@ -18,12 +18,15 @@ namespace my_blog.Controllers
             _repository = repository;
             _fileManager = fileManager;
         }
+
+        [Route("/panel/admin")]
         public IActionResult Index()
         {
             var posts = _repository.GetAllPosts();
             return View(posts);
         }
 
+        [Route("/post")]
         [HttpGet]
         public IActionResult Edit(int? id)
         {
@@ -47,6 +50,7 @@ namespace my_blog.Controllers
             }
         }
 
+        [Route("/post")]
         [HttpPost]
         public async Task<IActionResult> Edit(PostViewModel viewModel)
         {
