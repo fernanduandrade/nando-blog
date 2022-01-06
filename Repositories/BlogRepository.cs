@@ -60,6 +60,7 @@ namespace my_blog.Repositories
                     .Skip(skipAmount)
                     .Take(pageSize)
                     .ToList()
+                    .OrderByDescending(post => post.Created)
             };
         }
 
