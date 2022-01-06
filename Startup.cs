@@ -36,7 +36,7 @@ namespace my_blog
             services.AddMvc(options => options.EnableEndpointRouting = false);
             services.AddMvc(options => 
             {
-                options.CacheProfiles.Add("Monthly", new Microsoft.AspNetCore.Mvc.CacheProfile {Duration = 60 * 60 * 24 * 7 * 4});
+                options.CacheProfiles.Add("Daily", new Microsoft.AspNetCore.Mvc.CacheProfile {Duration = 60 * 60 * 24 * 7 * 4});
             });
         }
 
