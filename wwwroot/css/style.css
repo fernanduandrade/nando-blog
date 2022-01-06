@@ -367,6 +367,21 @@ body {
     transform: translateY(2px);
 }
 
+.panel__container {
+    overflow: hidden;
+    width: 100vw;
+    background-color: #F6F6FA;
+    padding: 1rem 1rem;
+}
+
+.panel__admin {
+    border: 1px solid #f0eeee;
+    border-radius: 7px;
+    padding: 1rem 1.5rem;
+    background-color: #fff;
+    height: 100vh;
+}
+
 .mt-lg {
     margin-top: 6rem;
 }

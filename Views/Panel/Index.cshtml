@@ -3,19 +3,49 @@
 @{
 
 }
-<h2>Admin principal</h2>
-<a asp-controller="Panel" asp-action="Edit">Adicionar post</a>  
-<div>
-    <ul>
-        @foreach (var post in Model)
-        {
-            <li>
-                @post.Title
-                |
-                <a asp-controller="Panel" asp-action="Edit" asp-route-id="@post.Id">Editar</a>            
-                |
-                <a asp-controller="Panel" asp-action="Remove" asp-route-id="@post.Id">Remover</a>                    
-            </li>
-        }
-    </ul>
+
+
+<div class="panel__container">
+    <h2>Artigos</h2>     
+    
+    <div class="panel__admin">
+        <div>
+            <a asp-controller="Panel" asp-action="Edit">Adicionar post</a>
+        </div>
+        <hr>
+        <div>
+            <label>Registros por página</label>
+            <select>
+                <option>5</option>
+                <option>10</option>
+                <option>20</option>
+                <option>30</option>
+                <option>20</option>
+            </select>
+
+            <label for="site-search">Pesquisar</label>
+            <input type="search">
+        </div>
+        <table>
+             <tr>
+                <th>Data</th>
+                <th>Título</th>
+                <th>Categoria</th>
+                <th>Ações</th>
+            </tr>
+            @foreach (var post in Model)
+            {
+                <tr>
+                    <td>@post.Created</td>
+                    <td>@post.Title</td>
+                    <td>@post.Category</td>
+                    <td>
+                        <a asp-controller="Panel" asp-action="Edit" asp-route-id="@post.Id">Editar</a>            
+                        |
+                        <a asp-controller="Panel" asp-action="Remove" asp-route-id="@post.Id">Remover</a>     
+                    </td>
+                </tr>             
+            }
+        </table>
+    </div>
 </div>

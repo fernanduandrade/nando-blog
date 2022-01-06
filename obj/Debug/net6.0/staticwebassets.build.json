@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8smqpVqoolFD4Sc/OGXJvoUTNYDWjOFrxWmJe4ob6Zo=",
+  "Hash": "j5roMZ2ALfO/7NdrYcEdhd1OFdfW1m2Pdfgp6eeiD7Q=",
   "Source": "my-blog",
   "BasePath": "_content/my-blog",
   "Mode": "Default",
@@ -661,6 +661,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\content\\static\\laptop.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Fernando\\Desktop\\nando-blog\\wwwroot\\css\\colors.css",
+      "SourceId": "my-blog",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Fernando\\Desktop\\nando-blog\\wwwroot\\",
+      "BasePath": "_content/my-blog",
+      "RelativePath": "css/colors.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\colors.css"
     },
     {
       "Identity": "C:\\Users\\Fernando\\Desktop\\nando-blog\\wwwroot\\css\\style.css",
