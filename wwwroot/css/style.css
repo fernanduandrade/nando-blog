@@ -371,7 +371,7 @@ body {
     overflow: hidden;
     width: 100vw;
     background-color: #F6F6FA;
-    padding: 1rem 1rem;
+    padding: .4rem 1rem;
 }
 
 .panel__admin {
@@ -381,6 +381,70 @@ body {
     background-color: #fff;
     height: 100vh;
 }
+
+.panel__custom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.panel__btn:visited, .panel__btn:link {
+    outline: none;
+    background: #3E065F;
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 11%;
+    border-radius: 4px;
+}
+
+.panel__heading {
+    color: #333;
+}
+
+.panel__icon {
+    width: 1rem;
+    height: 1rem;
+    margin-right: .5rem;
+    fill: currentColor; 
+}
+
+.panel__table {
+    border: 1px solid #f0eeee;
+    margin: auto;
+    min-width: 80vw;
+}
+
+.panel__table tbody tr:nth-of-type(odd) {
+      background-color: #fcfcfc; 
+}
+.panel__table tbody tr:hover {
+      background: #f5f5f5; 
+}
+
+table td {
+    height: 2rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.panel__thead {
+    background-color: #fcfcfc;
+    height: 3rem;
+}
+
+/* tag */
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    height: 1px;
+    color: #f0eeee; 
+    background-color: #f0eeee; /* Modern Browsers */
+}
+
+/* helpers */
 
 .mt-lg {
     margin-top: 6rem;
@@ -396,4 +460,29 @@ body {
 
 .mb-sm {
     margin-bottom: 2rem;
+}
+
+
+/* icones */
+.gg-math-plus,
+.gg-math-plus::after {
+    display: block;
+    box-sizing: border-box;
+    background: currentColor;
+    border-radius: 10px
+}
+.gg-math-plus {
+    margin-top: -2px;
+    position: relative;
+    transform: scale(var(--ggs,1));
+    width: 16px;
+    height: 2px
+}
+.gg-math-plus::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 16px;
+    top: -7px;
+    left: 7px
 }
