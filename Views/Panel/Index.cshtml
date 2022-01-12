@@ -53,10 +53,16 @@
                         <td>@post.Created.ToString("dd/MM/yyyy")</td>
                         <td>@post.Title</td>
                         <td>@post.Category</td>
-                        <td>
-                            <a asp-controller="Panel" asp-action="Edit" asp-route-id="@post.Id">Editar</a>            
-                            |
-                            <a asp-controller="Panel" asp-action="Remove" asp-route-id="@post.Id">Remover</a>     
+                        <td class="panel__action">
+                            <a class="panel__btn-action" asp-controller="Panel" asp-action="Edit" asp-route-id="@post.Id">
+                                <i class="panel__icon gg-pen"></i>
+                                <span>Editar</span>
+                            </a>            
+                            
+                            <a class="panel__btn-action" asp-controller="Panel" asp-action="Remove" asp-route-id="@post.Id">
+                                <i class="panel__icon gg-trash"></i>
+                                <span>Remover</span>
+                            </a>     
                         </td>
                     </tr>             
                 }
