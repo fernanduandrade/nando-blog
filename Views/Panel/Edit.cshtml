@@ -6,46 +6,51 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Trumbowyg/2.25.1/ui/trumbowyg.min.css">
 
-<div>
-    <form action="/post" method="post" enctype="multipart/form-data">
-        <input asp-for="Id" type="hidden">
-        <div>
-            <label>Título</label>
-            <input asp-for="Title" />
-        </div>
+<div class="panel__container">
+    <h2 class="panel__heading">Novo artigo</h2>
 
-        <div>
-            <label>Descrição</label>
-            <input asp-for="Description" />
-        </div>
+    <div class="panel__admin">
+        <form action="/post" method="post" enctype="multipart/form-data">
+            <input asp-for="Id" type="hidden">
+            <div class="form__column">
+                <label class="panel__label">Título</label>
+                <input class="panel__input" asp-for="Title" />
+            </div>
 
-        <div>
-            <label>Tags</label>
-            <input asp-for="Tags" />
-        </div>
+            <div class="form__column">
+                <label class="panel__label">Descrição</label>
+                <input class="panel__input" asp-for="Description" />
+            </div>
 
-        <div>
-            <label>Categoria</label>
-            <select asp-for="Category">
-                <option value="Programming">Programming</option>
-                <option value="Tips">Tips</option>
-                <option value="Study">Study</option>
-            </select>
-        </div>
+            <div class="form__column">
+                <label class="panel__label">Tags</label>
+                <input class="panel__input" asp-for="Tags" />
+            </div>
 
-        <div>
-            <label>Corpo da Mensagem</label>
-            <textarea id="editor" asp-for="Body"></textarea>
-        </div>
+            
+            <label class="panel__label">Categoria</label>
+            <div class="form__column" style="width:200px;">
+                <select asp-for="Category">
+                    <option value="Programming">Programming</option>
+                    <option value="Tips">Tips</option>
+                    <option value="Study">Study</option>
+                </select>
+            </div>
 
-        <div>
-            <label>Imagem</label>
-            <input asp-for="CurrentImage" type="hidden" />
-            <input asp-for="Image" />
-        </div>
+            <div class="form__column">
+                <textarea id="editor" asp-for="Body"></textarea>
+            </div>
 
-        <input type="submit" value="Submit" />
-    </form>
+            @* <div>
+                <label>Imagem</label>
+                <input asp-for="CurrentImage" type="hidden" />
+                <input asp-for="Image" />
+            </div> *@
+
+            <input class="new__article-btn" type="submit" value="Adicionar" />
+        </form>
+    </div>
+    
 </div> 
 
 @section scripts{
