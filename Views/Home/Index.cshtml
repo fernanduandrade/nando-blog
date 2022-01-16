@@ -8,13 +8,6 @@
 }
 
 <div class="post__content">
-    @* <form asp-controller="Home" asp-action="Index" method="get">
-        <input class="search" type="hidden" name="pageNumber" value="@Model.PageNumber" placeholder="pesquisar artigo">
-        <input class="search" type="hidden" name="category" value="@Model.Category" placeholder="pesquisar artigo">
-        <input class="search" type="text" name="search" placeholder="pesquisar artigo" value="@Model.Search">
-        <button class="submit-btn">Search</button>
-    </form> 
-    asp-route-slug="@post.Slug"*@
     
     @foreach (var post in Model.Posts)
     {
