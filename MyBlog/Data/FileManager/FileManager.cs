@@ -5,7 +5,7 @@ using System.IO;
 using System;
 using PhotoSauce.MagicScaler;
 
-namespace my_blog.Data.FileManager
+namespace MyBlog.Data.FileManager
 {
     public class FileManager : IFileManager
     {

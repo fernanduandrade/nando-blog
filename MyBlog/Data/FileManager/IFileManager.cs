@@ -2,7 +2,7 @@ using System.IO;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace my_blog.Data.FileManager
+namespace MyBlog.Data.FileManager
 {
     public interface IFileManager
     {

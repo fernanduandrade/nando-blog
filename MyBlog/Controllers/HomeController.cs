@@ -1,14 +1,14 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using my_blog.Data;
-using my_blog.Data.FileManager;
-using my_blog.Models;
-using my_blog.Repositories;
-using my_blog.ViewModels;
+using MyBlog.Data;
+using MyBlog.Data.FileManager;
+using MyBlog.Models;
+using MyBlog.Repositories;
+using MyBlog.ViewModels;
 using System.Collections.Generic;
 using System;
 
-namespace my_blog.Controllers
+namespace MyBlog.Controllers
 {
     public class HomeController : Controller
     {

@@ -8,9 +8,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using my_blog.Data;
+using MyBlog.Data;
 
-namespace my_blog
+namespace MyBlog
 {
     public class Program
     {

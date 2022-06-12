@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "my_blog": {
+    "MyBlog": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

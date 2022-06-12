@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using my_blog.Models;
+using MyBlog.Models;
 
-namespace my_blog.Data
+namespace MyBlog.Data
 {
     public class DataContext : IdentityDbContext
     {

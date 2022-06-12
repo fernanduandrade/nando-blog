@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using my_blog.Models;
-using my_blog.ViewModels;
+using MyBlog.Models;
+using MyBlog.ViewModels;
 
-namespace my_blog.Repositories
+namespace MyBlog.Repositories
 {
     public interface IBlogRepository
     {

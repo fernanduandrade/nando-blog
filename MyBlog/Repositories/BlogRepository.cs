@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using my_blog.Data;
-using my_blog.Models;
-using my_blog.ViewModels;
+using MyBlog.Data;
+using MyBlog.Models;
+using MyBlog.ViewModels;
 using System.Globalization;
 
-namespace my_blog.Repositories
+namespace MyBlog.Repositories
 {
     public class BlogRepository : IBlogRepository
     {

@@ -1,8 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>my_blog</RootNamespace>
+    <RootNamespace>MyBlog</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="utils\**" />
+    <Content Remove="utils\**" />
+    <EmbeddedResource Remove="utils\**" />
+    <None Remove="utils\**" />
+  </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.7" />
@@ -15,8 +21,5 @@
     <Context Update="wwwroot/content/blog/*.*" CopyToPublishDirectory="Never" />
     <Context Update="wwwroot/Lib/**/*.*" CopyToPublishDirectory="Never" />
     <Context Update="wwwroot/Lib/**/dist/**/*.*" CopyToPublishDirectory="Always" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="utils\" />
   </ItemGroup>
 </Project>

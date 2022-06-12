@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using my_blog.Models;
+using MyBlog.Models;
 
-namespace my_blog.ViewModels
+namespace MyBlog.ViewModels
 {
     public class IndexViewModel
     {

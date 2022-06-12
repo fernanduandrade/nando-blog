@@ -2,14 +2,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using my_blog.Data;
-using my_blog.Repositories;
+using MyBlog.Data;
+using MyBlog.Repositories;
 using Microsoft.AspNetCore.Identity;
-using my_blog.Data.FileManager;
+using MyBlog.Data.FileManager;
 
-namespace my_blog
+namespace MyBlog
 {
     public class Startup
     {

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Http;
 
-namespace my_blog.ViewModels
+namespace MyBlog.ViewModels
 {
     public class PostViewModel
     {

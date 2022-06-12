@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using my_blog.ViewModels;
+using MyBlog.ViewModels;
 
-namespace my_blog.Controllers
+namespace MyBlog.Controllers
 {
     public class AuthController : Controller
     {
