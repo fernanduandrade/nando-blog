@@ -12,8 +12,8 @@ namespace MyBlog.Controllers
 {
     public class HomeController : Controller
     {
-        private IBlogRepository _repository;
-        private IFileManager _filemanager;
+        private readonly IBlogRepository _repository;
+        private readonly IFileManager _filemanager;
         public HomeController(IBlogRepository repository, IFileManager fileManager)
         {
             _repository = repository;
@@ -47,6 +47,6 @@ namespace MyBlog.Controllers
 
         [Route("/about")]
         [HttpGet]
-        public IActionResult About() => View();
+        public IActionResult About() => View("About");
     }
 }
