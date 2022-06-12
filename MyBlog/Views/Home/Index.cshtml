@@ -8,7 +8,14 @@
 }
 
 <div class="post__content">
-    
+    <div class="post__search">
+        <form class="sidebar__form" asp-controller="Home" asp-action="Index" method="get">
+            <input class="search" type="hidden" name="pageNumber" value="@Model.PageNumber" placeholder="pesquisar artigo">
+            <input class="search" type="hidden" name="category" value="@Model.Category" placeholder="pesquisar artigo">
+            <input class="sidebar__search" type="text" name="search" placeholder="pesquisar artigo" value="@Model.Search">
+        </form> 
+    </div>
+    <div class="post__container">
     @foreach (var post in Model.Posts)
     {
         <div class="post">
@@ -23,6 +30,7 @@
         </div>
         
     }
+    </div>
 
     <partial name="_BlogPagination" model="Model" />
     

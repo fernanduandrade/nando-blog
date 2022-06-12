@@ -1,5 +1,3 @@
-@model IndexViewModel
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,12 +20,6 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            <form class="sidebar__form" asp-controller="Home" asp-action="Index" method="get">
-                <input class="search" type="hidden" name="pageNumber" value="@Model.PageNumber" placeholder="pesquisar artigo">
-                <input class="search" type="hidden" name="category" value="@Model.Category" placeholder="pesquisar artigo">
-                <input class="sidebar__search" type="text" name="search" placeholder="pesquisar artigo" value="@Model.Search">
-                @* //<button class="submit-btn">Search</button> *@
-            </form> 
             <p class="sidebar__title">Fernando Andrade </p>
             <ul class="sidebar__nav">
                 <li>
@@ -90,7 +82,7 @@
             </div>
 
             <div class="copyright">
-                &copy; 2021 por Fernando Andrade. Todos direitos reservados.
+                &copy; @DateTime.Now.Year.ToString(); por Luiz Fernando de Andrade Abreu AKA Fernando Andrade. Todos direitos reservados.
             </div>
         </div>
     

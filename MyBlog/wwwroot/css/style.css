@@ -50,7 +50,7 @@ body {
     height: 100vh;
     display: flex;
     justify-content: center;
-    background-color: #faf9f9;
+    background-color: #333;
 }
 
 .dropdown__content {
@@ -114,9 +114,7 @@ body {
 }
 
 .sidebar__form {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .sidebar__search {
@@ -127,7 +125,7 @@ body {
     font-family: inherit;
     padding: .7rem 2rem;
     border-radius: 100px;
-    width: 60%;
+    width: 90%;
     transition: all .2s;
 }
 
@@ -137,7 +135,7 @@ body {
 
 .sidebar__search:focus {
     outline: none;
-    width: 90%;
+    width: 100%;
 }
 
 .sidebar__items {
@@ -206,6 +204,10 @@ body {
     word-wrap: break-word;
 }
 
+.post__container {
+    margin-top: 4rem;
+}
+
 .post__category {
     text-decoration: none;
     margin-left: .5rem;
@@ -231,8 +233,14 @@ body {
     max-width: 65rem;
 }
 
+.post__search {
+    top: 2%;
+    left: 87%;
+    position: absolute;
+}
+
 .post:not(:last-child) {
-    margin-bottom: 1.5rem; 
+    margin-bottom: 1.5rem;
 }
 
 .post__link {
@@ -356,6 +364,7 @@ body {
     display: flex;
     min-width: 30rem;
     flex-direction: column;
+    position: relative;
     align-items: center;
 }
 

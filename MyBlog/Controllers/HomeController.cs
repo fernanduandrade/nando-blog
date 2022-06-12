@@ -30,9 +30,13 @@ namespace MyBlog.Controllers
             var vm = _repository.GetAllPosts(pageNumber, category, search);
             return View(vm);
         }
-            
+
         [Route("/{id}/{slug}")]
-        public IActionResult Post(int id) => View(_repository.GetPost(id));
+        public IActionResult Post(int id) 
+        {
+            var post = _repository.GetPost(id);
+            return View(post);
+        } 
         
         
         [HttpGet("/Image/{image}")]
@@ -41,7 +45,7 @@ namespace MyBlog.Controllers
             new FileStreamResult(_filemanager.ImageStream(image),$"image/{image.Substring(image.LastIndexOf('.') + 1)}");
 
 
-        [Route("/sobre")]
+        [Route("/about")]
         [HttpGet]
         public IActionResult About() => View();
     }
